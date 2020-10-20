@@ -39,13 +39,17 @@ void print(int* A, int length)
 
 int main()
 {
-  int length = 19;
+  int length = 10;
+  cout<<"Enter last - 1 element for an array starting from 0: ";
+  cin>> length;
   int toFind = 6;
   int* A = makeArray(length, true);
-
+  cout<<"Array :";
   print(A, length);
-  cout<<BSRecursive(A, toFind, 0, length - 1)<<endl;
-  cout<<BSIterative(A, 12, 0, length - 1)<<endl;
+  cout<< "Enter digit whos index you want to find: ";
+  cin>> toFind;
+  cout<<"Index from Recursive Search: "<<BSRecursive(A, toFind, 0, length - 1)<<endl;
+  cout<<"Index from Iterative Search: "<<BSIterative(A, toFind, 0, length - 1)<<endl;
 
   return 0;
 }
